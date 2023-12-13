@@ -18,6 +18,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   introduction
    installation
+   usage
+   parameters
+   output

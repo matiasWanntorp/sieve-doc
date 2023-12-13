@@ -1,5 +1,5 @@
-API
-===
+INTRODUCTION
+============
 
 .. _installation:
 

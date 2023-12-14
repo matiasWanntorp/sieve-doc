@@ -11,7 +11,7 @@ Pipeline summary
 The pipeline then:
 
 * Check the presence of genes of interest using `diamond <https://github.com/bbuchfink/diamond>`_ 
-* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using `Prodigal https://github.com/hyattpd/Prodigalt>`_ .
+* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using `Prodigal <https://github.com/hyattpd/Prodigalt>`_ .
 * Check the presence of secretion systems with `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_ .
 * Extract contigs of interest with `seqtk <https://github.com/lh3/seqtk>`_ and assigns taxonomy using `CAT <https://github.com/dutilh/CAT>`_ .
 * Performs metagenome binning using `MaxBin2 <https://sourceforge.net/projects/maxbin2/>`_ and `CONCOCT <https://github.com/BinPro/CONCOCT>`_ and checks the quality of the genome bins using `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ 

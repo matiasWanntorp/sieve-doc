@@ -55,16 +55,7 @@ You can also install singularity using Go.
 
 .. WARNING::
 
-   Install these dependencies with apt-get or yum/rpm as shown below or similar with other package managers.
-   .. code-block:: bash
-      $ sudo apt-get update && sudo apt-get install -y \
-    build-essential \
-    libssl-dev \
-    uuid-dev \
-    libgpgme11-dev \
-    squashfs-tools \
-    libseccomp-dev \
-    pkg-config
+   Install these dependencies with apt-get or yum/rpm as shown below or similar with other package managers. See  `Singularity <https://docs.sylabs.io/guides/3.0/user-guide/index.html>`_ documentation. 
 
 
 Singularity container
@@ -73,9 +64,53 @@ Singularity container
 Then, download the container from singularity-hub or build it locally with the singularity recipe:
 
 
+.. NOTE::
 
+   We highly recommend using the provided singularity container to install all needed software. Installing everything directly on the machine can be achieved using conda. 
 
+If you want to see the version of the tools installed in the container, simply use conda to list all installed packages:
 
+.. code-block:: bash
 
+   singularity exec sieve.sif conda list -n sieve
 
+Sieve
+-----
+
+Now you can either get sieve from Github or let Nextflow handle it. 
+
+.. code-block:: bash
+    nextflow run LascauxZelia/sieve --help
+
+or 
+
+.. code-block:: bash
+   git clone https://github.com/LascauxZelia/sieve.git
+   nextflow run sieve/main.nf --help
+
+CAT database
+------------
+
+In addition to these intallations, you will have to get the `CAT <https://github.com/dutilh/CAT#downloading-preconstructed-database-files>`_ database files on your system. You can either download preconstructed database files, or generate them yourself. 
+
+Downloading preconstructed database files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To download the database files, find the most recent version on tbb.bio.uu.nl/tina/CAT_prepare/, download and extract, and you are ready to run the pipeline!
+
+For NCBI nr:
+
+.. code-block:: bash
+    $ wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_nr.tar.gz
+
+    $ tar -xvzf 20231120_CAT_nr.tar.gz
+
+For GTDB (recommended):
+
+.. code-block:: bash
+    $ wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_gtdb.tar.gz
+
+    $ tar -xvzf 20231120_CAT_gtdb.tar.gz
+
+You can also creating a custom database, see the `instructions <https://github.com/dutilh/CAT#downloading-preconstructed-database-files>`_ . 
 

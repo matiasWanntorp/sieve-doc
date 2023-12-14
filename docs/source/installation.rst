@@ -80,11 +80,13 @@ Sieve
 Now you can either get sieve from Github or let Nextflow handle it. 
 
 .. code-block:: bash
+
     nextflow run LascauxZelia/sieve --help
 
 or 
 
 .. code-block:: bash
+
    git clone https://github.com/LascauxZelia/sieve.git
    nextflow run sieve/main.nf --help
 
@@ -101,13 +103,17 @@ To download the database files, find the most recent version on tbb.bio.uu.nl/ti
 For NCBI nr:
 
 .. code-block:: bash
+
     wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_nr.tar.gz
+
     tar -xvzf 20231120_CAT_nr.tar.gz
 
 For GTDB (recommended):
 
 .. code-block:: bash
+
     wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_gtdb.tar.gz
+
     tar -xvzf 20231120_CAT_gtdb.tar.gz
 
 You can also creating a custom database, see the `instructions <https://github.com/dutilh/CAT#downloading-preconstructed-database-files>`_ . 

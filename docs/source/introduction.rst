@@ -40,27 +40,12 @@ Basic usage
 
    Please provide pipeline parameters via the command line or Nextflow config file ``nextflow.config``.
 
-For more details and further functionality, please refer to the usage documentation and the parameter :doc:`usage <usage>` documentation. 
+For more details and further functionality, please refer to the :doc:`usage <usage>` documentation and the :doc:`parameter <parameters>` documentation. 
 
 Pipeline output
 ---------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+To see the results of an example test run with a full size dataset refers to results tab on the Github pipeline page. For more details about the output files and reports, please refer to the :doc:`output <output>` documentation.
 
 
 API and local data

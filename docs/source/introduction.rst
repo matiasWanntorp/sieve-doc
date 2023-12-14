@@ -40,7 +40,7 @@ Basic usage
 
    Please provide pipeline parameters via the command line or Nextflow config file ``nextflow.config``.
 
-For more details and further functionality, please refer to the usage documentation and the parameter documentation. 
+For more details and further functionality, please refer to the usage documentation and the parameter :doc:`usage <usage>` documentation. 
 
 Pipeline output
 ---------------

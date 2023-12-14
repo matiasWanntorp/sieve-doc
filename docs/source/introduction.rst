@@ -10,13 +10,13 @@ Pipeline summary
 
 The pipeline then:
 
-*Check the presence of genes of interest using diamond
-*Performs assembly using MEGAHIT and predicts proteins-coding genes for the assemblies using Prodigal.
-*Check the presence of secretion systems with MacSyFinder
-*Extract contigs of interest with seqtk and assigns taxonomy using CAT
-*Performs metagenome binning using MaxBin2 and CONCOCT and checks the quality of the genome bins using miComplete
-*Refines bins with DAS Tool
-*Assigns taxonomy to bins using BAT
+* Check the presence of genes of interest using diamond
+* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using Prodigal.
+* Check the presence of secretion systems with MacSyFinder
+* Extract contigs of interest with seqtk and assigns taxonomy using CAT
+* Performs metagenome binning using MaxBin2 and CONCOCT and checks the quality of the genome bins using miComplete
+* Refines bins with DAS Tool
+* Assigns taxonomy to bins using BAT
 
 Futhermore, the pipeline creates various reports in the results directory specified, including a final table summarizing the main findings of the run.
 A shiny app is available to visualise the main results. 

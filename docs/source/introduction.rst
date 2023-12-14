@@ -1,7 +1,7 @@
-INTRODUCTION
+Introduction
 ============
 
-**sieve** is a bioinformatics filters-analysis pipeline for assembly, binning and annotation of metagenomes from EBI public database or local user data. 
+**`SIEVE <https://github.com/LascauxZelia/sieve>`_** is a bioinformatics filters-analysis pipeline for assembly, binning and annotation of metagenomes from EBI public database or local user data. 
 
 Pipeline summary
 ----------------
@@ -10,13 +10,13 @@ Pipeline summary
 
 The pipeline then:
 
-* Check the presence of genes of interest using diamond
-* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using Prodigal.
-* Check the presence of secretion systems with MacSyFinder
-* Extract contigs of interest with seqtk and assigns taxonomy using CAT
-* Performs metagenome binning using MaxBin2 and CONCOCT and checks the quality of the genome bins using miComplete
-* Refines bins with DAS Tool
-* Assigns taxonomy to bins using BAT
+* Check the presence of genes of interest using `diamond <https://github.com/bbuchfink/diamond>`_ 
+* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using `Prodigal https://github.com/hyattpd/Prodigalt>`_ .
+* Check the presence of secretion systems with `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_ .
+* Extract contigs of interest with `seqtk <https://github.com/lh3/seqtk>`_ and assigns taxonomy using `CAT <https://github.com/dutilh/CAT>`_ .
+* Performs metagenome binning using `MaxBin2 <https://sourceforge.net/projects/maxbin2/>`_ and `CONCOCT <https://github.com/BinPro/CONCOCT>`_ and checks the quality of the genome bins using `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ 
+* Refines bins with `DAS Tool <https://github.com/cmks/DAS_Tool>`_ 
+* Assigns taxonomy to bins using `BAT <https://github.com/dutilh/CAT>`_ 
 
 Futhermore, the pipeline creates various reports in the results directory specified, including a final table summarizing the main findings of the run.
 A shiny app is available to visualise the main results. 
@@ -30,7 +30,7 @@ Basic usage
 
 .. NOTE::
 
-   If you are new to Nextflow, please refer to this page on how to set-up Nextflow. 
+   If you are new to Nextflow, please refer to this `page <https://www.nextflow.io/docs/latest/getstarted.html>`_ on how to set-up Nextflow. 
 
 .. code-block:: console
 

@@ -1,7 +1,7 @@
 Introduction
 ============
 
-** `SIEVE <https://github.com/LascauxZelia/sieve>`_ ** is a bioinformatics filters-analysis pipeline for assembly, binning and annotation of metagenomes from EBI public database or local user data. 
+`SIEVE <https://github.com/LascauxZelia/sieve>`_ is a bioinformatics filters-analysis pipeline for assembly, binning and annotation of metagenomes from EBI public database or local user data. 
 
 Pipeline summary
 ----------------
@@ -20,10 +20,6 @@ The pipeline then:
 
 Futhermore, the pipeline creates various reports in the results directory specified, including a final table summarizing the main findings of the run.
 A shiny app is available to visualise the main results. 
-
-.. WARNING::
-
-   The 'local data' input option only works with short reads. 
 
 Basic usage
 -----------
@@ -48,14 +44,37 @@ Pipeline output
 To see the results of an example test run with a full size dataset refers to results tab on the Github pipeline page. For more details about the output files and reports, please refer to the :doc:`output <output>` documentation.
 
 
-API and local data
-------------------
+Inputs
+------
 
+Two types of input are supported by the pipeline. 
+
+Local data
+~~~~~~~~~~
+
+
+.. WARNING::
+
+   The 'local data' input option only works with short reads. 
+
+MGnify API
+~~~~~~~~~~
+
+
+
+For more details, please refer to the :doc: `input <input>` documentation. 
 
 Credits
 -------
 
+SIEVE pipeline was written by Zelia Bontemps, Andrei Gullaiev and Lionel Guy at Uppsala University (Departement of Medical Biochemistry and Microbiology.
+
+We thank the MGnify team for the assistance in the developpement of this pipeline. 
 
 
 Citation
 --------
+
+If you use SIEVE, please cite the article: 
+
+

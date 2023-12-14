@@ -88,6 +88,7 @@ or
 .. code-block:: bash
 
    git clone https://github.com/LascauxZelia/sieve.git
+
    nextflow run sieve/main.nf --help
 
 CAT database

@@ -61,7 +61,17 @@ You can also install singularity using Go.
 Singularity container
 ---------------------
 
-Then, download the container from singularity-hub or build it locally with the singularity recipe:
+Then, download the container from singularity cloud:
+
+.. code-block:: bash
+
+   singularity XXXX
+
+Or build it locally with the singularity recipe ``sieve.def`` available in sieve Github repository (you need the root access):
+
+.. code-block:: bash
+
+   sudo singularity build sieve.sif sieve.def
 
 
 .. NOTE::

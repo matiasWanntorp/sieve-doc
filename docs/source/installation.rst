@@ -109,7 +109,7 @@ In addition to these intallations, you will have to get the `CAT <https://github
 Downloading preconstructed database files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To download the database files, find the most recent version on tbb.bio.uu.nl/tina/CAT_prepare/, download and extract, and you are ready to run the pipeline!
+To download the database files, find the most recent version on `tbb.bio.uu.nl/tina/CAT_prepare/ <tbb.bio.uu.nl/tina/CAT_prepare/>`_ , download and extract, and you are ready to run the pipeline!
 
 For NCBI nr:
 

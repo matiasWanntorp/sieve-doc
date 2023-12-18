@@ -26,7 +26,7 @@ Singularity
 
 We provide a singularity container with all necessary tools installed and configured. To use it, you first need to install `Singularity <https://docs.sylabs.io/guides/3.0/user-guide/index.html>`_  itself: 
 
-.. code-block:: bash
+.. code-block:: console
 
    $ export VERSION=3.0.3 && # adjust this as necessary \
        mkdir -p $GOPATH/src/github.com/sylabs && \
@@ -38,7 +38,7 @@ We provide a singularity container with all necessary tools installed and config
 
 Singularity uses a custom build system called makeit. mconfig is called to generate a Makefile and then make is used to compile and install.
 
-.. code-block:: bash
+.. code-block:: console
 
    $ ./mconfig && \
     make -C ./builddir && \
@@ -46,7 +46,7 @@ Singularity uses a custom build system called makeit. mconfig is called to gener
 
 By default Singularity will be installed in the /usr/local directory hierarchy. You can specify a custom directory with the --prefix option, to mconfig like so:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ ./mconfig --prefix=/opt/singularity
 
@@ -63,13 +63,13 @@ Singularity container
 
 Then, download the container from singularity cloud:
 
-.. code-block:: bash
+.. code-block:: console
 
    singularity XXXX
 
 Or build it locally with the singularity recipe ``sieve.def`` available in sieve Github repository (you need the root access):
 
-.. code-block:: bash
+.. code-block:: console
 
    sudo singularity build sieve.sif sieve.def
 
@@ -80,7 +80,7 @@ Or build it locally with the singularity recipe ``sieve.def`` available in sieve
 
 If you want to see the version of the tools installed in the container, simply use conda to list all installed packages:
 
-.. code-block:: bash
+.. code-block:: console
 
    singularity exec sieve.sif conda list -n sieve
 
@@ -89,13 +89,13 @@ Sieve
 
 Now you can either get sieve from Github or let Nextflow handle it. 
 
-.. code-block:: bash
+.. code-block:: console
 
     nextflow run LascauxZelia/sieve --help
 
 or 
 
-.. code-block:: bash
+.. code-block:: console
 
    git clone https://github.com/LascauxZelia/sieve.git
 
@@ -113,7 +113,7 @@ To download the database files, find the most recent version on `tbb.bio.uu.nl/t
 
 For NCBI nr:
 
-.. code-block:: bash
+.. code-block:: console
 
     wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_nr.tar.gz
 
@@ -121,7 +121,7 @@ For NCBI nr:
 
 For GTDB (recommended):
 
-.. code-block:: bash
+.. code-block:: console
 
     wget tbb.bio.uu.nl/tina/CAT_prepare/20231120_CAT_gtdb.tar.gz
 

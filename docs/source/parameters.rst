@@ -1,9 +1,8 @@
 Parameters
 ==========
 
-To get a quick overview of all available command line options, run:
+To get a quick overview of all available command line options, run::
 
-.. code-block:: bash
    nextflow run LascauxZelia/sieve --help
 
 Input/output options

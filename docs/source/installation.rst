@@ -61,11 +61,11 @@ You can also install singularity using Go.
 Singularity container
 ---------------------
 
-Then, download the container from singularity cloud:
+Then, download the container from singularity cloud (recommended):
 
 .. code-block:: console
 
-   singularity pull --arch amd64 library://lascauxzelia/sieve/sieve:latest
+   singularity pull --arch amd64 library://lascauxzelia/sieve/sieve:0.1
 
 Or build it locally with the singularity recipe ``sieve.def`` available in sieve Github repository (you need the root access):
 

@@ -25,7 +25,7 @@ or
    sample,reads_1,reads_2,biome
    sample1,data/sample1.fastq.gz,,aquatic
    sample2,data/sample2.fastq.gz,,soil
-   sample3,data/sample3.fastq.gz,,,cave
+   sample3,data/sample3.fastq.gz,,cave
 
 
 Please note the following requirements:

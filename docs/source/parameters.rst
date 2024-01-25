@@ -14,7 +14,7 @@ Specifies that the input is single-end reads.
 
 ``--local_input`` (default: null)
 
-Input CSV samplesheet file containing information about the samples in the experiment. For more details please see the `MGnify API <https://www.ebi.ac.uk/metagenomics/api/v1/biomes>`_ .
+Input CSV samplesheet file containing information about the samples in the experiment. For more details please refer to the :doc:`usage <usage>` documentation. 
 
 ``--resultsDir`` (required)
 

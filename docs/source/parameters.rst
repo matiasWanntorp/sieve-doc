@@ -8,6 +8,14 @@ To get a quick overview of all available command line options, run::
 Input/output options
 --------------------
 
+``--noapi`` (default: false)
+
+Specifies that the input includes data from the MGnify API.
+
+``--local`` (default: false)
+
+Specifies that the input includes local data.
+
 ``--single_end`` (default: false)
 
 Specifies that the input is single-end reads.

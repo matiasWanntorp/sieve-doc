@@ -14,18 +14,18 @@ The path to reads_2 is optional. Valid examples could look like the following:
 .. code-block:: console
 
    sample,reads_1,reads_2,biome
-   sample1,data/sample1_R1.fastq.gz,data/sample1_R2.fastq.gz,aquatic
-   sample2,data/sample2_R1.fastq.gz,data/sample2_R2.fastq.gz,soil
-   sample3,data/sample3_R1.fastq.gz,data/sample3_R2.fastq.gz,cave
+   sample1,data/sample1_R1.fastq.gz,data/sample1_R2.fastq.gz,root:Environmental:Terrestrial:Soil:Mine
+   sample2,data/sample2_R1.fastq.gz,data/sample2_R2.fastq.gz,root:Environmental:Terrestrial:Soil
+   sample3,data/sample3_R1.fastq.gz,data/sample3_R2.fastq.gz,root:Environmental:Terrestrial:Soil:Cave
 
 or
 
 .. code-block:: console
 
    sample,reads_1,reads_2,biome
-   sample1,data/sample1.fastq.gz,,aquatic
-   sample2,data/sample2.fastq.gz,,soil
-   sample3,data/sample3.fastq.gz,,cave
+   sample1,data/sample1.fastq.gz,,root:Environmental:Terrestrial:Soil:Mine
+   sample2,data/sample2.fastq.gz,,root:Environmental:Terrestrial
+   sample3,data/sample3.fastq.gz,,root:Environmental:Terrestrial:Soil:Cave
 
 
 Please note the following requirements:

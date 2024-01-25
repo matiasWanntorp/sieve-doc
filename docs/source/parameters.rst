@@ -8,9 +8,13 @@ To get a quick overview of all available command line options, run::
 Input/output options
 --------------------
 
-``--data_dir`` 
+``--single_end`` (default: false)
 
-A single path to one or several sequence files, and the ``sample_sheet.tab``. 
+Specifies that the input is single-end reads.
+
+``--local_input`` (default: null)
+
+Input CSV samplesheet file containing information about the samples in the experiment. For more details please see the `MGnify API <https://www.ebi.ac.uk/metagenomics/api/v1/biomes>`_ .
 
 ``--resultsDir`` (required)
 
@@ -237,7 +241,7 @@ To simply specify the Singularity image file from where the containers are start
 
 Specigy when restarting the pipeline. Nextflow will use cached results from any pipeline steps where inputs are the same, continuing from where it got to previously. 
 
-You can also supply a run name to resume a specific run: ``-resume [run-name]``. Usse the ``nextflow log`` command to show previous run names. 
+You can also supply a run name to resume a specific run: ``-resume [run-name]``. Use the ``nextflow log`` command to show previous run names. 
 
 
 

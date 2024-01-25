@@ -103,6 +103,10 @@ Enter one or more species names. The phylum name must appear in the Greengenes a
 Control for targeted genes 
 --------------------------
 
+``--nodiamond`` 
+
+Skip diamond processes (db and aligment). 
+
 ``--genes`` (required)
 
 A single path to one or several local fasta files containing orthologous groups of proteins. 
@@ -110,10 +114,6 @@ A single path to one or several local fasta files containing orthologous groups 
 .. WARNING::
 
    Only ``.fasta`` extension are allowed for this process. 
-
-``--skip_diamond`` 
-
-Skip diamond alignement. 
 
 ``--diamond_min_align_reads`` (default: 0)
 
@@ -137,7 +137,7 @@ MEGAHIT uses multiple k-mer strategy. Minimum k can be set with k_min option.
 Secretion system search options
 -------------------------------
 
-``--skip_macsyfinder``
+``--nomacsyfinder``
 
 Skip MacSyFinder process. 
 

@@ -12,6 +12,10 @@ Input/output options
 
 Specifies that the input is single-end reads.
 
+``--assembly_input`` (default: false)
+
+Specifies that the input reads are already assembled.
+
 ``--local_input`` (default: null)
 
 Input CSV samplesheet file containing information about the samples in the experiment. For more details please refer to the :doc:`usage <usage>` documentation. 

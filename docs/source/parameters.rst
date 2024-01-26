@@ -164,6 +164,10 @@ Maximal independent e-value for Hmmer hits to be selected for system detection.
 Binning options
 ---------------
 
+``--nomaxbin2`` (default: false) (Maxbin2)
+
+Skip binning with Maxbin2.
+
 ``--markers`` (default: 107) (Maxbin2)
 
 Set the markerset, choose between 107 marker genes by default or 40 marker genes. See `MaxBin2 documention <https://macsyfinder.readthedocs.io/en/latest/modeler_guide/index.html>`_ .
@@ -171,6 +175,12 @@ Set the markerset, choose between 107 marker genes by default or 40 marker genes
 ``--probthreashold`` (default: 0.8) (Maxbin2)
 
 Minimum probability for EM algorithm. 
+
+
+
+``--noconcoct`` (default: false) (Concoct)
+
+Skip binning with Concoct.
 
 ``--chunk_size`` (default: 10000) (Concoct)
 

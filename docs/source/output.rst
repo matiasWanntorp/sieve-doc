@@ -1,10 +1,17 @@
-OUTPUT
-============
+Output
+======
+
+Introduction
+------------
+
+This section describes the output produced by the pipeline.
 
 Pipeline overview
 -----------------
 
-To use Lumache, first install it using pip:
+The sieve pipeline is built using Nextflow and processes data using the following steps:
+
+
 
 
 Output for each process

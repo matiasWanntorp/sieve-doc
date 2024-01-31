@@ -179,6 +179,14 @@ Maxbin2
 
 Output files:
 
+ * ``[sample]_maxbin.*.fasta`` 
+ * ``[sample]_maxbin.log``
+ * ``[sample]_maxbin.marker`` 
+ * ``[sample]_maxbin.marker_of_each_bin.tar.gz`` 
+ * ``[sample]_maxbin.noclass`` 
+ * ``[sample]_maxbin.summary`` 
+ * ``[sample]_maxbin.tooshort`` 
+
 Concoct
 ~~~~~~~
 
@@ -216,6 +224,21 @@ WARNING ::
 
 Output files:
 
+* in ``workdir/[sample]_DASTool_bins/``
+
+  * ``[sample]_concoct.*.fa`` and/or ``[sample]_maxbin.*.fasta``
+
+* in work dir
+
+  * ``all_prot.dmnd``
+  * ``[sample]_allBins.eval`` 
+  * ``[sample]_DASTool_contig2bin.tsv``
+  * ``[sample]_DASTool_summary.tsv`` 
+  * ``[sample]_maxbin.contigs2bin.tsv`` 
+  * ``[sample]_proteins.faa/all.b6/bacteria.scg/findSCG.b6/scg.candidates.faa`` 
+  * ``[sample].seqlength``
+  * ``[sample]_DASTool.log``
+
 
 miComplete
 ~~~~~~~~~~
@@ -244,12 +267,23 @@ Taxonomic classification of binned genomes
 
 Output files:
 
+* in work dir
+
+  * ``[bin].ORF2LCA.txt``
+  * ``[bin]classification_names.txt`` 
+  * ``[bin]classification_official_names.txt`` 
+  * ``[bin].log``
+
 Summary
 -------
 
 Generate the general stats table and plot for the pipeline. 
 
 Output file:
+
+* in ``<outdir>/``
+
+  * ``results_summary.tsv``
 
 Pipeline information
 --------------------

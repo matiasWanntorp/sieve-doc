@@ -42,11 +42,30 @@ Fetching data from MGnify API
 Getting accession
 ~~~~~~~~~~~~~~~~~
 
+Getting all analysis accession from MGnify API based on the parameters in the command line. 
+
+Output files:
+ * in * ``outdir/acession/``
+  * ``accession.csv``
+
 Targeting taxonomy
 ~~~~~~~~~~~~~~~~~~
 
+Apply taxonomic filters on the accession obtained previously.
+
+Output files:
+ * in * ``outdir/taxonomy/``
+  * ``[sample]_ID_to_download.csv``
+  * ``[sample]_taxonomy_details.csv``
+
 Downloading
 ~~~~~~~~~~~
+
+Downloading data using accession number. 
+
+Output files: 
+ * ``[sample].fastq.gz``
+
 
 Identification of genes of interest
 -----------------------------------
@@ -56,18 +75,22 @@ Generating diamond database
 
 Create a `diamond <https://github.com/bbuchfink/diamond>`_  formatted reference database from a FASTA input file.
 Output files:
+  * ``references.dmnd``
+  * ``references.fasta``
 
 Identification of target genes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 `Diamond <https://github.com/bbuchfink/diamond>`_ is a sequence aligner for protein and translated DNA searches, designed for high performance analysis of big sequence data. 
 Output files:
-
+  * ``[sample].daa``
 
 Assembly
 --------
 
 Reads are assembled with `MEGAHIT <https://github.com/voutcn/megahit>`_ . MEGAHIT is a single node assembler for large and complex metagenomics short reads.
 Output files:
+  * ``[sample]_assembly_MG.fasta`` if experiment type is metagenomic
+  * ``[sample]_assembly_AS.fasta`` if experiment type is assembly
 
 Gene prediction
 ---------------
@@ -75,11 +98,26 @@ Gene prediction
 Protein-coding genes are predicted for each assembly using `Prodigal <https://github.com/hyattpd/Prodigalt>`_ .
 Output files:
 
+* ``[sample].faa``
+
 Identification of macromolecular systems
 -----------------------------------------
 
 `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_  is a program to model and detect macromolecular systems, genetic pathways… in protein datasets. Criteria for systems detection include component content (quorum), and genomic co-localization. Each component corresponds to a hidden Markov model (HMM) protein profile to perform sequence similarity searches with the program Hmmer.
 Output files:
+
+* in ``<outdir>/contig/``
+
+  * ``[sample]_contig.fasta`` 
+  * ``[sample]_contig_name_deduplicated.txt``
+
+* in work dir
+
+ * ``[sample]_contig_names.txt``
+ * ``[sample]_contig_proteins.faa.idx`` 
+ * in ``out_macsyfinder``/[sample]/
+
+  * ``all_best_solutions.tsv``
 
 Taxonomic classification of the targeted contigs
 ------------------------------------------------
@@ -87,21 +125,42 @@ Taxonomic classification of the targeted contigs
 `CAT <https://github.com/dutilh/CAT>`_  is a toolkit for annotating contigs and bins from metagenome-assembled-genomes. The sieve pipeline uses CAT to assign taxonomy to targeted contigs.
 Output files:
 
+* in ``<outdir>/contig/classification/``
+
+  * ``[sample]_classification_summary.txt`` 
+
+* in work dir
+
+ * ``[sample].alignment.diamond``
+ * ``[sample].contig2classification.txt`` 
+ * ``[sample].ORF2LCA.txt``
+ * ``[sample]classification_names.txt`` 
+ * ``[sample]classification_official_names.txt`` 
+ * ``[sample].log``
+ * ``[sample].predicted.proteins.faa``
+ * ``[sample].predicted.proteins.gff``
+
 Binning and binning refinement
 ------------------------------
 
 Contig coverage
 ~~~~~~~~~~~~~~~
 
-Create bwa index, Align reads with bwa mem, Convert and sort sam to bam file using samtools, Index BAM file, Output per contig coverage using pileup.sh, Generate abundance file from mapped reads
+Create bwa index, Align reads with `bwa <https://bio-bwa.sourceforge.net>`_ mem, Convert and sort sam to bam file using `samtools <https://github.com/samtools/samtools>`_ , Index BAM file, Output per contig coverage using pileup.sh, Generate abundance file from mapped reads
 These files ares for downstream binning steps.
-Output files: 
 
+Output files: 
+ * ``[sample]_abundance.txt``
+ * ``[sample]_aln.bam``
+ * ``[sample]_aln.sam``
+ * ``[sample]_cov.txt``
+ * ``[sample]_index.amb/ann/bwt/pac/sa``
 
 Maxbin2
 ~~~~~~~
 
 `MaxBin2 <https://sourceforge.net/projects/maxbin2/>`_ recovers genome bins (that is, contigs/scaffolds that all belongs to a same organism) from metagenome assemblies.
+
 Output files:
 
 Concoct

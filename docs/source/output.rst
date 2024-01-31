@@ -39,6 +39,7 @@ Control of local input reads
 ----------------------------
 
 Adapterremoval
+~~~~~~~~~~~~~~
 
 `Adapterremoval <https://github.com/MikkelSchubert/adapterremoval>`_ searches for and removes remnant adapter sequences form High-throughput Sequencing (HTS) data and optionally trims low quality bases from the 3' end of reads following adapter removal. The output logs are stored in the results folder. 
 
@@ -49,21 +50,27 @@ Output files:
 Fetching data from MGnify API
 -----------------------------
 
-Getting accession 
+Getting accession
+~~~~~~~~~~~~~~~~~
 
 Targeting taxonomy
+~~~~~~~~~~~~~~~~~~
 
 Downloading
-
+~~~~~~~~~~~
 
 Identification of genes of interest
 -----------------------------------
 
 Generating diamond database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Create a DIAMOND formatted reference database from a FASTA input file.
 Output files:
 
-Identification of target genes using diamond. Diamond is a sequence aligner for protein and translated DNA searches, designed for high performance analysis of big sequence data. 
+Identification of target genes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Diamond is a sequence aligner for protein and translated DNA searches, designed for high performance analysis of big sequence data. 
 Output files:
 
 
@@ -95,20 +102,28 @@ Binning and binning refinement
 ------------------------------
 
 Contig coverage
+~~~~~~~~~~~~~~~
+
 Create bwa index, Align reads with bwa mem, Convert and sort sam to bam file using samtools, Index BAM file, Output per contig coverage using pileup.sh, Generate abundance file from mapped reads
 These files ares for downstream binning steps.
 Output files: 
 
 
 Maxbin2
+~~~~~~~
+
 MetaBAT2 recovers genome bins (that is, contigs/scaffolds that all belongs to a same organism) from metagenome assemblies.
 Output files:
 
 Concoct
+~~~~~~~
+
 CONCOCT performs unsupervised binning of metagenomic contigs by using nucleotide composition, coverage data in multiple samples and linkage data from paired end reads.
 Output files:
 
 DASTool
+~~~~~~~
+
 DAS Tool is an automated binning refinement method that integrates the results of a flexible number of binning algorithms to calculate an optimized, non-redundant set of bins from a single assembly. nf-core/mag uses this tool to attempt to further improve bins based on combining the MetaBAT2 and MaxBin2 binning output, assuming sufficient quality is met for those bins.
 
 DAS Tool will remove contigs from bins that do not pass additional filtering criteria, and will discard redundant lower-quality output from binners that represent the same estimated ‘organism’, until the single highest quality bin is represented.
@@ -120,6 +135,8 @@ Output files:
 
 
 miComplete
+~~~~~~~~~~
+
 miComplete is a compact software aimed at rapidly and accurately determining of the quality of assembled genomes, often metagenome assembled bins. miComplete also aims at providing a more reliable completeness and redundancy metric via a system of weighting the impact of different marker genes presence or absence differently.
 Output files:
 

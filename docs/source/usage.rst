@@ -68,7 +68,6 @@ or
 
 
 Please note the following requirements:
-
     *a minimum 4 of comma-seperated columns
     *Valid file extension: .csv
     *Must contain the header sample,read_1,read_2,biome

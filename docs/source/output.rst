@@ -169,6 +169,22 @@ Concoct
 `CONCOCT <https://github.com/BinPro/CONCOCT>`_ performs unsupervised binning of metagenomic contigs by using nucleotide composition, coverage data in multiple samples and linkage data from paired end reads.
 
 Output files:
+* in ``workdir/[sample]_concot_bins/``
+  * ``[sample]_concoct.*.fa`` 
+
+* in work dir
+
+  * ``[sample]_args.txt``
+  * ``[sample]_clustering_gt1000.csv`` 
+  * ``[sample]_clustering_merged.csv``
+  * ``[sample]_concoct.contigs2bin.tsv`` 
+  * ``[sample]_contigs_10K.bed`` 
+  * ``[sample]_contigs_10K.fasta`` 
+  * ``[sample]_coverage_table.tsv``
+  * ``[sample]_original_data_gt1000.csv``
+  * ``[sample]_PCA_components_data_gt1000.csv`` 
+  * ``[sample]_PCA_transformed_data_gt1000.csv`` 
+  * ``[sample]_log.txt``
 
 DASTool
 ~~~~~~~
@@ -189,13 +205,17 @@ miComplete
 `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ is a compact software aimed at rapidly and accurately determining of the quality of assembled genomes, often metagenome assembled bins. miComplete also aims at providing a more reliable completeness and redundancy metric via a system of weighting the impact of different marker genes presence or absence differently.
 
 Output files:
+ * ``[bin_name].fna``
+ * ``[bin_name]_bins_stats_quality.tab``
+ * ``micomplete.log``
 
 Genome annotation of binned genomes
 -----------------------------------
 
-Protein-coding genes are predicted for each bin that match de bins quality criteria defined by the user. 
+`miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ also perform the protein-coding genes prediction for each bin that match de bins quality criteria defined by the user. 
 
 Output file:
+ * ``[bin_name]_profigal.faa``
 
 Taxonomic classification of binned genomes
 ------------------------------------------

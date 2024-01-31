@@ -285,7 +285,12 @@ Output file:
 
   * ``results_summary.tsv``
 
+.. IMPORTANT::
+
+ To visualize the main statistical results you can upload the file ``results_summary.tsv`` to the sieve shinyapp directly HERE.
+
 Pipeline information
 --------------------
+
 
 

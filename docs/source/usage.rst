@@ -41,6 +41,10 @@ Local data input
 
 To use you own local data you can specify a CSV samplesheet input file that contains the paths to your FASTQ files and additional metadata. 
 
+.. NOTE::
+
+   By default the input data comes from the MGnify API, if you want to use you own data as input you have to specify --local in the command line. 
+
 At a minimum CSV file should contain the following columns:
 sample,read_1,read_2,experiment,biome
 
@@ -81,9 +85,44 @@ Please note the following requirements:
 
    A sample sheet template is available on the GitHub repository.
 
-Binning
--------
+Running the pipeline
+--------------------
 
+The typical command for running the pipeline is as follows:
+
+.. code-block:: console
+
+   nextflow run main.nf --resultsDir <OUTDIR> --cat_db <PATH/TO/CAT_database> --cat_taxonomy <PATH/TO/CAT_taxonomy>
+
+Note that the pipeline will create the following files in your working directory:
+
+.. code-block:: console
+
+   work                # Directory containing the nextflow working files
+   <OUTDIR>            # Finished results in specified location (defined with --resultsDir)
+   .nextflow_log       # Log file from Nextflow
+
+
+How to skip steps
+-----------------
+
+Some of the pipeline steps are optional such as the identification of genes of interest, the identification of macromolecular systems and the usage of all binning tools.
+If you want to skip one or all these steps you can specify it directly in the command line. 
+
+Valid examples could look like the following:
+
+.. code-block:: console
+   --noapi                #Skip the API processes
+   --nodiamond            #Skip the indentification of genes
+   --nomacsyfinder        #Skip the identification of macromolecular system
+   --nomaxbin2            #Skip binning with maxbin2
+   --noconcoct            #Skip binning with concoct
+
+
+Need help to writing the running command line ?
+-----------------------------------------------
+
+We have developped the shiny app sieve_commandline to generate the commande line with graphics interface.
 
 
 

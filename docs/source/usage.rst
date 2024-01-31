@@ -4,7 +4,7 @@ Usage
 Local data input
 ----------------
 
-Alternatively, to use you own local data you can specify a CSV samplesheet input file that contains the paths to your FASTQ files and additional metadata. 
+To use you own local data you can specify a CSV samplesheet input file that contains the paths to your FASTQ files and additional metadata. 
 
 At a minimum CSV file should contain the following columns:
 sample,read_1,read_2,experiment,biome
@@ -40,27 +40,32 @@ Please note the following requirements:
 
 .. WARNING::
 
-   Please provide the biome lineage correctly as same nomenlature a MGnify. If you don't know the biome lineage you can find it on the MGnify website (browse biomes data)
-
-https://www.ebi.ac.uk/metagenomics/browse/biomes/
+   Please provide the biome lineage correctly as same nomenlature a MGnify. If you don't know the biome lineage you can find it on the `MGnify website (browse biomes data) <https://www.ebi.ac.uk/metagenomics/browse/biomes/>`_
 
 .. NOTE::
 
-   A sample sheet template is available on the GitHub repository
+   A sample sheet template is available on the GitHub repository.
 
 MGnify API input
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To use data from MGnify API you can first specify a sample accession, study accesion, experiment type, pipeline version, instrument platform, instrument model and biome name.
 
-.. autofunction:: lumache.get_random_ingredients
+You can set these parameters in the command line. 
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+The path to read_2 is optional. Valid examples could look like the following:
 
-.. autoexception:: lumache.InvalidKindError
+.. code-block:: console
+
+   --sample_accession ERR2136697
+   --study_accession MGYS00001946
+   --experiment_type metagenomic
+   --instrument_platform Illumina
+   --instrument_model Illumina MiSeq
+   --pipeline_version 2.0
+   --biome_name aquatic
+
+For more details about these input values please refer to the section parameters of the documentation. 
 
 For example:
 

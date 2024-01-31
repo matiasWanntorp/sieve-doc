@@ -1,6 +1,37 @@
 Usage
 =====
 
+MGnify API input
+----------------
+
+To use data from MGnify API you can first specify a sample accession, study accesion, experiment type, pipeline version, instrument platform, instrument model and biome name. Valid examples could look like the following:
+
+.. code-block:: console
+
+   --sample_accession ERR2136697
+   --study_accession MGYS00001946
+   --experiment_type metagenomic
+   --pipeline_version 2.0
+   --instrument_platform Illumina
+   --instrument_model Illumina MiSeq
+   --biome_name aquatic
+
+For more details please refer to the :doc:`usage <parameters>` documentation. 
+
+You can apply taxonomy filters on these data before the downloading step. You can specify taxonomy filters at each taxonomic level directly in the command line. 
+Valid examples could look like the following:
+
+.. code-block:: console
+
+   --taxonomy_phylum proteobacteria
+   --taxonomy_class alphaproteobacteria
+   --taxonomy_order ['legionellales','triotrichales']
+   --taxonomy_family legionellaceae
+   --taxonomy_genus legionella
+   --taxonomy_species 'legionella pneumophila'
+
+For more details please refer to the :doc:`usage <parameters>` documentation. 
+
 Local data input
 ----------------
 
@@ -46,30 +77,9 @@ Please note the following requirements:
 
    A sample sheet template is available on the GitHub repository.
 
-MGnify API input
-----------------
+Binning
+-------
 
-To use data from MGnify API you can first specify a sample accession, study accesion, experiment type, pipeline version, instrument platform, instrument model and biome name.
 
-You can set these parameters in the command line. 
 
-The path to read_2 is optional. Valid examples could look like the following:
-
-.. code-block:: console
-
-   --sample_accession ERR2136697
-   --study_accession MGYS00001946
-   --experiment_type metagenomic
-   --instrument_platform Illumina
-   --instrument_model Illumina MiSeq
-   --pipeline_version 2.0
-   --biome_name aquatic
-
-For more details about these input values please refer to the section parameters of the documentation. 
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 

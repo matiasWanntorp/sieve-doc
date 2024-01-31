@@ -112,6 +112,7 @@ If you want to skip one or all these steps you can specify it directly in the co
 Valid examples could look like the following:
 
 .. code-block:: console
+
    --noapi                #Skip the API processes
    --nodiamond            #Skip the indentification of genes
    --nomacsyfinder        #Skip the identification of macromolecular system

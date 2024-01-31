@@ -25,17 +25,26 @@ The sieve pipeline is built using Nextflow and processes data using the followin
 * Pipeline information - Metrics generated during the workflow execution
 
 
+* Check for the presence of genes of interest using `diamond <https://github.com/bbuchfink/diamond>`_ 
+* Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using `Prodigal <https://github.com/hyattpd/Prodigalt>`_ .
+* Check for the presence of macromolecular secretion systems with `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_ .
+* Extract contigs of interest using `seqtk <https://github.com/lh3/seqtk>`_ and assigns taxonomy using `CAT <https://github.com/dutilh/CAT>`_ .
+* Performs metagenome binning using `MaxBin2 <https://sourceforge.net/projects/maxbin2/>`_ and `CONCOCT <https://github.com/BinPro/CONCOCT>`_ and checks the quality of the genome bins using `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ 
+* Refines bins with `DAS Tool <https://github.com/cmks/DAS_Tool>`_ 
+* Assigns taxonomy to bins using `BAT <https://github.com/dutilh/CAT>`_ 
+
+
+
 Control of local input reads
 ----------------------------
 
 Adapterremoval
 
-https://github.com/MikkelSchubert/adapterremoval
-
-Adapterremoval searches for and removes remnant adapter sequences form High-throughput Sequencing (HTS) data and optionally trims low quality bases from the 3' end of reads following adapter removal. The output logs are stored in the results folder. 
+`Adapterremoval <https://github.com/MikkelSchubert/adapterremoval>`_ searches for and removes remnant adapter sequences form High-throughput Sequencing (HTS) data and optionally trims low quality bases from the 3' end of reads following adapter removal. The output logs are stored in the results folder. 
 
 Output files:
-(To be completed)
+  * ``[sample]_trimSE.fastq.gz`` if --single-end is specified
+  * ``[sample]_trimPE.fastq.gz`` for pair-end reads
 
 Fetching data from MGnify API
 -----------------------------

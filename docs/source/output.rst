@@ -45,7 +45,7 @@ Getting accession
 Getting all analysis accession from MGnify API based on the parameters in the command line. 
 
 Output files:
- * in * ``outdir/acession/``
+ * in ``outdir/acession/``
   * ``accession.csv``
 
 Targeting taxonomy
@@ -54,7 +54,7 @@ Targeting taxonomy
 Apply taxonomic filters on the accession obtained previously.
 
 Output files:
- * in * ``outdir/taxonomy/``
+ * in ``outdir/taxonomy/``
   * ``[sample]_ID_to_download.csv``
   * ``[sample]_taxonomy_details.csv``
 
@@ -131,14 +131,14 @@ Output files:
 
 * in work dir
 
- * ``[sample].alignment.diamond``
- * ``[sample].contig2classification.txt`` 
- * ``[sample].ORF2LCA.txt``
- * ``[sample]classification_names.txt`` 
- * ``[sample]classification_official_names.txt`` 
- * ``[sample].log``
- * ``[sample].predicted.proteins.faa``
- * ``[sample].predicted.proteins.gff``
+  * ``[sample].alignment.diamond``
+  * ``[sample].contig2classification.txt`` 
+  * ``[sample].ORF2LCA.txt``
+  * ``[sample]classification_names.txt`` 
+  * ``[sample]classification_official_names.txt`` 
+  * ``[sample].log``
+  * ``[sample].predicted.proteins.faa``
+  * ``[sample].predicted.proteins.gff``
 
 Binning and binning refinement
 ------------------------------
@@ -167,6 +167,7 @@ Concoct
 ~~~~~~~
 
 `CONCOCT <https://github.com/BinPro/CONCOCT>`_ performs unsupervised binning of metagenomic contigs by using nucleotide composition, coverage data in multiple samples and linkage data from paired end reads.
+
 Output files:
 
 DASTool
@@ -186,24 +187,28 @@ miComplete
 ~~~~~~~~~~
 
 `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ is a compact software aimed at rapidly and accurately determining of the quality of assembled genomes, often metagenome assembled bins. miComplete also aims at providing a more reliable completeness and redundancy metric via a system of weighting the impact of different marker genes presence or absence differently.
+
 Output files:
 
 Genome annotation of binned genomes
 -----------------------------------
 
 Protein-coding genes are predicted for each bin that match de bins quality criteria defined by the user. 
+
 Output file:
 
 Taxonomic classification of binned genomes
 ------------------------------------------
 
 `BAT <https://github.com/dutilh/CAT>`_  is a toolkit for annotating contigs and bins from metagenome-assembled-genomes. The sieve pipeline uses BAT to assign taxonomy to genome bins based on the taxnomy of the contigs.
+
 Output files:
 
 Summary
 -------
 
 Generate the general stats table and plot for the pipeline. 
+
 Output file:
 
 Pipeline information

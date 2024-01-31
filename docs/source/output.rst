@@ -30,6 +30,8 @@ Control of local input reads
 
 Adapterremoval
 
+https://github.com/MikkelSchubert/adapterremoval
+
 Adapterremoval searches for and removes remnant adapter sequences form High-throughput Sequencing (HTS) data and optionally trims low quality bases from the 3' end of reads following adapter removal. The output logs are stored in the results folder. 
 
 Output files:

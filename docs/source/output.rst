@@ -33,6 +33,7 @@ Adapterremoval
 `Adapterremoval <https://github.com/MikkelSchubert/adapterremoval>`_ searches for and removes remnant adapter sequences form High-throughput Sequencing (HTS) data and optionally trims low quality bases from the 3' end of reads following adapter removal. The output logs are stored in the results folder. 
 
 Output files:
+
   * ``[sample]_trimSE.fastq.gz`` if --single-end is specified
   * ``[sample]_trimPE.fastq.gz`` for pair-end reads
 
@@ -45,7 +46,9 @@ Getting accession
 Getting all analysis accession from MGnify API based on the parameters in the command line. 
 
 Output files:
+
  * in ``outdir/acession/``
+
   * ``accession.csv``
 
 Targeting taxonomy
@@ -54,7 +57,9 @@ Targeting taxonomy
 Apply taxonomic filters on the accession obtained previously.
 
 Output files:
+
  * in ``outdir/taxonomy/``
+
   * ``[sample]_ID_to_download.csv``
   * ``[sample]_taxonomy_details.csv``
 
@@ -64,6 +69,7 @@ Downloading
 Downloading data using accession number. 
 
 Output files: 
+
  * ``[sample].fastq.gz``
 
 
@@ -74,21 +80,27 @@ Generating diamond database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a `diamond <https://github.com/bbuchfink/diamond>`_  formatted reference database from a FASTA input file.
+
 Output files:
+
   * ``references.dmnd``
   * ``references.fasta``
 
 Identification of target genes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 `Diamond <https://github.com/bbuchfink/diamond>`_ is a sequence aligner for protein and translated DNA searches, designed for high performance analysis of big sequence data. 
+
 Output files:
+
   * ``[sample].daa``
 
 Assembly
 --------
 
 Reads are assembled with `MEGAHIT <https://github.com/voutcn/megahit>`_ . MEGAHIT is a single node assembler for large and complex metagenomics short reads.
+
 Output files:
+
   * ``[sample]_assembly_MG.fasta`` if experiment type is metagenomic
   * ``[sample]_assembly_AS.fasta`` if experiment type is assembly
 
@@ -96,14 +108,16 @@ Gene prediction
 ---------------
 
 Protein-coding genes are predicted for each assembly using `Prodigal <https://github.com/hyattpd/Prodigalt>`_ .
+
 Output files:
 
-* ``[sample].faa``
+ * ``[sample].faa``
 
 Identification of macromolecular systems
 -----------------------------------------
 
 `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_  is a program to model and detect macromolecular systems, genetic pathways… in protein datasets. Criteria for systems detection include component content (quorum), and genomic co-localization. Each component corresponds to a hidden Markov model (HMM) protein profile to perform sequence similarity searches with the program Hmmer.
+
 Output files:
 
 * in ``<outdir>/contig/``
@@ -123,6 +137,7 @@ Taxonomic classification of the targeted contigs
 ------------------------------------------------
 
 `CAT <https://github.com/dutilh/CAT>`_  is a toolkit for annotating contigs and bins from metagenome-assembled-genomes. The sieve pipeline uses CAT to assign taxonomy to targeted contigs.
+
 Output files:
 
 * in ``<outdir>/contig/classification/``
@@ -150,6 +165,7 @@ Create bwa index, Align reads with `bwa <https://bio-bwa.sourceforge.net>`_ mem,
 These files ares for downstream binning steps.
 
 Output files: 
+
  * ``[sample]_abundance.txt``
  * ``[sample]_aln.bam``
  * ``[sample]_aln.sam``
@@ -169,7 +185,9 @@ Concoct
 `CONCOCT <https://github.com/BinPro/CONCOCT>`_ performs unsupervised binning of metagenomic contigs by using nucleotide composition, coverage data in multiple samples and linkage data from paired end reads.
 
 Output files:
+
 * in ``workdir/[sample]_concot_bins/``
+
   * ``[sample]_concoct.*.fa`` 
 
 * in work dir
@@ -205,6 +223,7 @@ miComplete
 `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ is a compact software aimed at rapidly and accurately determining of the quality of assembled genomes, often metagenome assembled bins. miComplete also aims at providing a more reliable completeness and redundancy metric via a system of weighting the impact of different marker genes presence or absence differently.
 
 Output files:
+
  * ``[bin_name].fna``
  * ``[bin_name]_bins_stats_quality.tab``
  * ``micomplete.log``
@@ -215,6 +234,7 @@ Genome annotation of binned genomes
 `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ also perform the protein-coding genes prediction for each bin that match de bins quality criteria defined by the user. 
 
 Output file:
+
  * ``[bin_name]_profigal.faa``
 
 Taxonomic classification of binned genomes

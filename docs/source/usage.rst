@@ -68,13 +68,13 @@ or
 
 
 Please note the following requirements:
-    *a minimum 4 of comma-seperated columns
-    *Valid file extension: .csv
-    *Must contain the header sample,read_1,read_2,biome
-    *FastQ files must be compressed (.fastq.gz, .fq.gz)
-    *Within one samplesheet either only single-end, assembled reads, or only paired-end reads can be specified
-    *If single-end reads are specified, the command line parameter --single_end must be specified as well
-    *If assembled reads are specified, the command line parameter --assembly_input must be specified as well
+    * a minimum 4 of comma-seperated columns
+    * Valid file extension: .csv
+    * Must contain the header sample,read_1,read_2,biome
+    * FastQ files must be compressed (.fastq.gz, .fq.gz)
+    * Within one samplesheet either only single-end, assembled reads, or only paired-end reads can be specified
+    * If single-end reads are specified, the command line parameter --single_end must be specified as well
+    * If assembled reads are specified, the command line parameter --assembly_input must be specified as well
 
 .. WARNING::
 

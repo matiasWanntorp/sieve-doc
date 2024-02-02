@@ -1,9 +1,12 @@
-Template for the Read the Docs tutorial
-=======================================
+Welcome to sieve's documentation!
+===================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+`SIEVE <https://github.com/LascauxZelia/sieve>`_ is a bioinformatics filters-analysis pipeline for assembly, binning and annotation of metagenomes from MGNify API (EBI) or local user data. 
+**Sieve** (/lu'make/) is a Nextflow pipeline very easy to use and offers a *simple* and *intuitive* interface to see your results.
 
-Read the tutorial here:
+Check out the :doc:`usage` section for further information, including
+how to :ref:`installation` the project.
 
-https://docs.readthedocs.io/en/stable/tutorial/
+.. note::
+
+   This project is under active development.

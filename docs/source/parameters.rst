@@ -32,17 +32,6 @@ Input CSV samplesheet file containing information about the samples in the exper
 
 The output directory where the results will be saved. You have to use absolute paths. 
 
-+-----------------------------------+--------------------+--------------------+--------------------------------------------------------------------------------------+
-|            Parameters             |      Required      |   Default value    |                                     Description                                      |
-+===================================+====================+====================+======================================================================================+
-|            ``--noapi`             |         No         |       False        | Specifies that the input includes data from the MGnify API                           |
-+-----------------------------------+--------------------+--------------------+--------------------------------------------------------------------------------------+
-|            ``--local`             |         No         |       False        | Specifies that the input includes local data.                                        |
-+-----------------------------------+--------------------+--------------------+--------------------------------------------------------------------------------------+
-|         ``--local_input`          |         No         |       False        | Input CSV samplesheet file containing information about the samples in the           |
-|                                   |                    |                    | experiment. For more details please refer to the :doc:`usage <usage>` documentation. |
-+-----------------------------------+--------------------+--------------------+--------------------------------------------------------------------------------------+
-
 MGnify filters options
 ----------------------
 
@@ -280,6 +269,33 @@ To simply specify the Singularity image file from where the containers are start
 Specigy when restarting the pipeline. Nextflow will use cached results from any pipeline steps where inputs are the same, continuing from where it got to previously. 
 
 You can also supply a run name to resume a specific run: ``-resume [run-name]``. Use the ``nextflow log`` command to show previous run names. 
+
+Options summary
+---------------
+
++-----------------------------------+--------------------+--------------------+
+|            Parameters             |      Required      |   Default value    |
++===================================+====================+====================+
+| Input options                                                               | 
++-----------------------------------+--------------------+--------------------+
+|              --noapi              |         No         |       False        |
++-----------------------------------+--------------------+--------------------+
+|              --local              |         No         |       False        | 
++-----------------------------------+--------------------+--------------------+
+| Local input options                                                         | 
++-----------------------------------+--------------------+--------------------+
+|           --local_input           |         No         |       False        |
++-----------------------------------+--------------------+--------------------+
+|           --single_end            |         No         |       False        |
++-----------------------------------+--------------------+--------------------+
+|         --assembly_input          |         No         |       False        |
++-----------------------------------+--------------------+--------------------+
+|           --resultsDir            |         Yes        |        null        |
++-----------------------------------+--------------------+--------------------+
+| MGnify API input options                                                    | 
++-----------------------------------+--------------------+--------------------+
+|                                   |                    |                    |
++-----------------------------------+--------------------+--------------------+
 
 
 

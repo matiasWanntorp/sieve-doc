@@ -273,6 +273,8 @@ You can also supply a run name to resume a specific run: ``-resume [run-name]``.
 Options summary
 ---------------
 
+To be continued.
+
 +-----------------------------------+--------------------+--------------------+
 |            Parameters             |      Required      |   Default value    |
 +===================================+====================+====================+

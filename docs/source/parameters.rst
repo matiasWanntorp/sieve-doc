@@ -32,6 +32,16 @@ Input CSV samplesheet file containing information about the samples in the exper
 
 The output directory where the results will be saved. You have to use absolute paths. 
 
++-----------+-----------+-----------+
+| Heading 1 | Heading 2 | Heading 3 |
++===========+===========+===========+
+| Hello     | World     |           |
++-----------+-----------+-----------+
+| foo       |                       |
++-----------+          bar          |
+| baz       |                       |
++-----------+-----------------------+
+
 
 MGnify filters options
 ----------------------

@@ -111,7 +111,7 @@ Downloading preconstructed database files
 
 To download the database files, find the most recent version on `tbb.bio.uu.nl/tina/CAT_prepare/ <tbb.bio.uu.nl/tina/CAT_prepare/>`_ , download and extract, and you are ready to run the pipeline!
 
-For NCBI nr:
+For NCBI nr (recommended):
 
 .. code-block:: console
 
@@ -119,7 +119,7 @@ For NCBI nr:
 
     tar -xvzf 20231120_CAT_nr.tar.gz
 
-For GTDB (recommended):
+For GTDB:
 
 .. code-block:: console
 

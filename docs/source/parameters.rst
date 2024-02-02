@@ -176,8 +176,6 @@ Set the markerset, choose between 107 marker genes by default or 40 marker genes
 
 Minimum probability for EM algorithm. 
 
-
-
 ``--noconcoct`` (default: false) (Concoct)
 
 Skip binning with Concoct.
@@ -189,6 +187,11 @@ Chunk size of the script ``cut_ut_fasta.py``. Cut up fasta file in non-overlappi
 ``--overlap_size`` (default: 0) (Concoct)
 
 Overlap size of the script ``cut_ut_fasta.py``. Cut up fasta file in non-overlapping or overlapping parts of equal length. 
+
+--class_all_bins (default: false)
+
+To run the classfication process on all the bins and not only on the good quality bins. 
+
 
 Bin quality check and refinement options 
 ----------------------------------------
@@ -224,6 +227,9 @@ Absolute path of the CAT database or custom database. For CAT_prepare database p
 
 Absolute path of the CAT taxonomy database or custom taxonomy database. For CAT_prepare database path for ``2021-01-07_taxonomy/``
 
+``--f`` (default: 0.5)
+
+Minimum fraction classification support, on precision, fraction of classified sequences, sensitivity, and taxonomic rank of classification.
 
 Run options
 -----------

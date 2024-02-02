@@ -65,13 +65,13 @@ Then, download the container from singularity cloud (recommended):
 
 .. code-block:: console
 
-   singularity pull --arch amd64 library://lascauxzelia/sieve/sieve:0.1
+   singularity pull --arch amd64 library://lascauxzelia/sieve/sieve:01
 
 Or build it locally with the singularity recipe ``sieve.def`` available in sieve Github repository (you need the root access):
 
 .. code-block:: console
 
-   sudo singularity build sieve.sif sieve.def
+   sudo singularity build sieve01.sif sieve.def
 
 
 .. NOTE::

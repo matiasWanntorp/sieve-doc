@@ -39,7 +39,8 @@ The output directory where the results will be saved. You have to use absolute p
 +-----------------------------------+--------------------+--------------------+------------------------------------------------------------------------------------+
 |            ``--local`             |         No         |       False        | Specifies that the input includes local data.                                      |
 +-----------------------------------+--------------------+--------------------+------------------------------------------------------------------------------------+
-|         ``--local_input`          |         No         |       False        | Input CSV samplesheet file containing information about the samples in the         |    
+|         ``--local_input`          |         No         |       False        | Input CSV samplesheet file containing information about the samples in the         |
+|                                   |                    |                    |                                                                                    |
 +-----------------------------------+--------------------+--------------------+------------------------------------------------------------------------------------+
 
 MGnify filters options

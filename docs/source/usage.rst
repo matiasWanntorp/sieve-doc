@@ -16,7 +16,7 @@ To use data from MGnify API you can first specify a sample accession, study acce
    --instrument_model Illumina MiSeq
    --biome_name aquatic
 
-For more details please refer to the :doc:`usage <parameters>` documentation. 
+For more details please refer to the :doc:`parameters <parameters>` documentation. 
 
 Please note the following requirements:
    * You have to precise a least one of these parameters in the command line 

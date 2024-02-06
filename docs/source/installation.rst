@@ -99,7 +99,7 @@ or
 
    git clone https://github.com/LascauxZelia/sieve.git
 
-   nextflow run sieve/main.nf --help
+   nextflow run . --help
 
 CAT database
 ------------

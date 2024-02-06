@@ -30,7 +30,7 @@ Basic usage
 
 .. code-block:: console
 
-   nextflow run main.nf --resultsDir <OUTDIR> --cat_db <PATH/TO/CAT_database> --cat_taxonomy <PATH/TO/CAT_taxonomy>
+   nextflow run . with-singularity sieve.sif --resultsDir <OUTDIR> --cat_db <PATH/TO/CAT_database> --cat_taxonomy <PATH/TO/CAT_taxonomy>
 
 .. WARNING::
 

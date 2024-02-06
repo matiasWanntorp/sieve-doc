@@ -187,7 +187,7 @@ Chunk size of the script ``cut_ut_fasta.py``. Cut up fasta file in non-overlappi
 
 Overlap size of the script ``cut_ut_fasta.py``. Cut up fasta file in non-overlapping or overlapping parts of equal length. 
 
---class_all_bins (default: false)
+``--class_all_bins`` (default: false)
 
 To run the classfication process on all the bins and not only on the good quality bins. 
 

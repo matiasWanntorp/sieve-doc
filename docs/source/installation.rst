@@ -61,7 +61,7 @@ You can also install singularity using Go.
 Singularity container
 ---------------------
 
-Then, download the container from singularity cloud (recommended):
+Then, download the container from singularity cloud (highly recommended):
 
 .. code-block:: console
 

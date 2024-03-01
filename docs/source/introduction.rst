@@ -10,16 +10,16 @@ To analyse metagenomic datasets, users can input their own data (the pipeline wi
 
 The pipeline then:
 
-* Check for the presence of genes of interest using `diamond <https://github.com/bbuchfink/diamond>`_ 
+* Identification of genes of interest using `diamond <https://github.com/bbuchfink/diamond>`_ 
 * Performs assembly using `MEGAHIT <https://github.com/voutcn/megahit>`_ and predicts proteins-coding genes for the assemblies using `Prodigal <https://github.com/hyattpd/Prodigalt>`_ .
-* Check for the presence of macromolecular secretion systems with `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_ .
+* Identification of contigs that contains macromolecular systems, genetic pathways of our interest with `MacSyFinder <https://github.com/gem-pasteur/macsyfinder>`_ .
 * Extract contigs of interest using `seqtk <https://github.com/lh3/seqtk>`_ and assigns taxonomy using `CAT <https://github.com/dutilh/CAT>`_ .
 * Performs metagenome binning using `MaxBin2 <https://sourceforge.net/projects/maxbin2/>`_ and `CONCOCT <https://github.com/BinPro/CONCOCT>`_ and checks the quality of the genome bins using `miComplete <https://bitbucket.org/evolegiolab/micomplete/src/master/>`_ 
 * Refines bins with `DAS Tool <https://github.com/cmks/DAS_Tool>`_ 
 * Assigns taxonomy to bins using `BAT <https://github.com/dutilh/CAT>`_ 
 
 Futhermore, the pipeline creates various reports in the results directory specified, including a final table summarizing the main findings of the run.
-A shiny app is available to visualise the main results. 
+A shiny app `'Sieve app' <https://lascauxzelia.shinyapps.io/sieve_app/>`_ is available to visualise the main results. 
 
 Basic usage
 -----------
@@ -53,7 +53,7 @@ Local data
 
 The user can enter their own data by adding the flag ``--local``. All raw reads must be in the same directory and have the same extension ``.fastq.gz``. 
 
-In the same directory the user must add the samples files. The samples file specifies the samples, the name of the corresponding raw read files and the sequencing pair represented in these files, separated by tabs. A template is available `here <https://github.com/LascauxZelia/sieve>`_ . 
+In the command line the user must add ``--local_input`` with the path of the samples sheet (csv format). The samples file specifies the samples, the path of the corresponding raw read files and the biome lineage, separated by commas. A template is available `here <https://github.com/LascauxZelia/sieve>`_ . 
 
 It has the format: ``sample,read_1,read_2,biome``. For more details please refer to the :doc:`usage <usage>` documentation.
 
@@ -78,7 +78,7 @@ For more details, please refer to the :doc: `input <input>` documentation.
 Credits
 -------
 
-SIEVE pipeline was written by Zelia Bontemps, Andrei Gulliaiev and Lionel Guy at Uppsala University (Departement of Medical Biochemistry and Microbiology).
+SIEVE pipeline was written by Zelia Bontemps, Andrei Gulliaev and Lionel Guy at Uppsala University (Departement of Medical Biochemistry and Microbiology).
 
 We thank the MGnify team for the assistance in the developpement of this pipeline. 
 

@@ -91,7 +91,7 @@ The typical command for running the pipeline is as follows:
 
 .. code-block:: console
 
-   nextflow run main.nf --resultsDir <OUTDIR> --cat_db <PATH/TO/CAT_database> --cat_taxonomy <PATH/TO/CAT_taxonomy>
+   nextflow run main.nf --with-singularity sieve01.sif --resultsDir <OUTDIR> --cat_db <PATH/TO/CAT_database> --cat_taxonomy <PATH/TO/CAT_taxonomy>
 
 Note that the pipeline will create the following files in your working directory:
 
@@ -122,8 +122,7 @@ Valid examples could look like the following:
 Need help to writing the running command line ?
 -----------------------------------------------
 
-We have developped the shiny app sieve_commandline to generate the commande line with graphics interface.
-
+We have developed the shiny app with a `'command_generator' <https://lascauxzelia.shinyapps.io/sieve_app/>`_ tab that can easily generate the command line with a graphical interface.
 
 
 

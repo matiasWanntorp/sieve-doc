@@ -106,7 +106,7 @@ Control for targeted genes
 
 Skip diamond processes (db and aligment). 
 
-``--genes`` (required)
+``--genes`` (required if --nodiamond is not set)
 
 A single path to one or several local fasta files containing orthologous groups of proteins. 
 
@@ -269,35 +269,3 @@ To simply specify the Singularity image file from where the containers are start
 Specigy when restarting the pipeline. Nextflow will use cached results from any pipeline steps where inputs are the same, continuing from where it got to previously. 
 
 You can also supply a run name to resume a specific run: ``-resume [run-name]``. Use the ``nextflow log`` command to show previous run names. 
-
-Options summary
----------------
-
-To be continued.
-
-+-----------------------------------+--------------------+--------------------+
-|            Parameters             |      Required      |   Default value    |
-+===================================+====================+====================+
-| Input options                                                               | 
-+-----------------------------------+--------------------+--------------------+
-|              --noapi              |         No         |       False        |
-+-----------------------------------+--------------------+--------------------+
-|              --local              |         No         |       False        | 
-+-----------------------------------+--------------------+--------------------+
-| Local input options                                                         | 
-+-----------------------------------+--------------------+--------------------+
-|           --local_input           |         No         |       False        |
-+-----------------------------------+--------------------+--------------------+
-|           --single_end            |         No         |       False        |
-+-----------------------------------+--------------------+--------------------+
-|         --assembly_input          |         No         |       False        |
-+-----------------------------------+--------------------+--------------------+
-|           --resultsDir            |         Yes        |        null        |
-+-----------------------------------+--------------------+--------------------+
-| MGnify API input options                                                    | 
-+-----------------------------------+--------------------+--------------------+
-|                                   |                    |                    |
-+-----------------------------------+--------------------+--------------------+
-
-
-

@@ -28,7 +28,6 @@ Same sample as the input with a taxonomic filter at order level.
 
 Do you want to reconstruct MAGs by looking for specific genes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Same sample as input. Same taxonomic filters. New filter: Identification of genes of interest to the user.
 (All genes must be in fasta format in the same folder. Specify the real path of the folder in the --gene parameter)
 

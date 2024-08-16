@@ -91,7 +91,7 @@ Now you can either get sieve from Github or let Nextflow handle it.
 
 .. code-block:: console
 
-    nextflow run LascauxZelia/sieve --help
+    nextflow run LascauxZelia/sieve -help
 
 or 
 
@@ -99,7 +99,7 @@ or
 
    git clone https://github.com/LascauxZelia/sieve.git
 
-   nextflow run . --help
+   nextflow run . -help
 
 CAT database
 ------------

@@ -22,10 +22,6 @@ Please note the following requirements:
    * You have to precise a least one of these parameters in the command line 
    * If the command line parameter --noapi is specified all the parameters related to the API input are ignored
 
-.. WARNING::
-
-   Some biomes in MGnify have a lot of analyses associated with them, for example the human digestive system. sieve can handle these large biomes but completing the pipeline will take    long. Adding more filters such as a taxonomy filter or filtering based on user provided genes will decrease the completion time significantly.
-
 You can apply taxonomy filters on these data before the downloading step. You can specify taxonomy filters at each taxonomic level directly in the command line. 
 Valid examples could look like the following:
 
@@ -39,6 +35,11 @@ Valid examples could look like the following:
    --taxonomy_species 'legionella pneumophila'
 
 For more details please refer to the :doc:`usage <parameters>` documentation. 
+
+.. WARNING::
+
+   Some biomes in MGnify have a lot of analyses associated with them, for example the human digestive system. sieve can handle these large biomes but completing the pipeline will take    long. Adding more filters such as a taxonomy filter or filtering based on user provided genes will decrease the completion time significantly.
+
 
 Local data input
 ----------------

@@ -22,6 +22,11 @@ Please note the following requirements:
    * You have to precise a least one of these parameters in the command line 
    * If the command line parameter --noapi is specified all the parameters related to the API input are ignored
 
+.. WARNING::
+
+Some biomes in MGnify have a lot of analyses associated with them, for example the human digestive system. sieve can handle these large biomes but completing the pipeline will take long. Adding more filters such as a taxonomy filter or filtering based on user provided genes will decrease the completion time significantly.
+
+
 You can apply taxonomy filters on these data before the downloading step. You can specify taxonomy filters at each taxonomic level directly in the command line. 
 Valid examples could look like the following:
 
@@ -76,7 +81,7 @@ Please note the following requirements:
     * If single-end reads are specified, the command line parameter --single_end must be specified as well
     * If assembled reads are specified, the command line parameter --assembly_input must be specified as well
 
-.. WARNING::
+.. WARNING:: 
 
    Please provide the biome lineage correctly as same nomenlature a MGnify. If you don't know the biome lineage you can find it on the `MGnify website (browse biomes data) <https://www.ebi.ac.uk/metagenomics/browse/biomes/>`_
 

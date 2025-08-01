@@ -112,11 +112,15 @@ A single path to one or several local fasta files containing orthologous groups 
 
 .. WARNING::
 
-   Only ``.fasta`` extension are allowed for this process. 
+   Only ``.fasta`` extension are allowed for this process.
+
+``--user_diamond_options`` (default: -f 100 --unal 0 --id 85 -e 1e-6)
+This flag allows users to customize the diamond command by providing a string of preferred diamond option. For example, if the user would like to change the identity threshold to 95 % for alignments and add the flag '--fast', the user would input the follwoing when running sieve: 
+--user_diamond_options '-f 100 --unal 0 --id 95 -e 1e-6 --fast'. 
 
 ``--diamond_min_align_reads`` (default: 0)
 
-This is an part of an if statement that checks if the number of observed alignment from diamond analysis is not greater than the specified threshold (diamond_min_align_reads). If this condition is true, it means that there are not enough alignments, and then the file will be removed and the sample will be deleted for the rest of the pipeline. 
+This is a part of an if statement that checks if the number of observed alignment from diamond analysis is not greater than the specified threshold (diamond_min_align_reads). If this condition is true, it means that there are not enough alignments, and then the file will be removed and the sample will be deleted for the rest of the pipeline. 
 
 Assembly options
 ----------------

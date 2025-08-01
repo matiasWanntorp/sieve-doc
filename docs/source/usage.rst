@@ -24,7 +24,7 @@ Please note the following requirements:
 
 .. WARNING::
 
-   Some biomes in MGnify have a lot of analyses associated with them, for example the human digestive system. sieve can handle these large biomes but completing the pipeline will take     long. Adding more filters such as a taxonomy filter or filtering based on user provided genes will decrease the completion time significantly.
+   Some biomes in MGnify have a lot of analyses associated with them, for example the human digestive system. sieve can handle these large biomes but completing the pipeline will take    long. Adding more filters such as a taxonomy filter or filtering based on user provided genes will decrease the completion time significantly.
 
 You can apply taxonomy filters on these data before the downloading step. You can specify taxonomy filters at each taxonomic level directly in the command line. 
 Valid examples could look like the following:

@@ -116,7 +116,7 @@ A single path to one or several local fasta files containing orthologous groups 
 
 ``--user_diamond_options`` (default: -f 100 --unal 0 --id 85 -e 1e-6)
 
-This flag allows users to customize the diamond command by providing a string of preferred diamond option. For example, if the user would like to change the identity threshold to 95 % for alignments and add the flag '--fast', the user would input the following when running sieve: 
+This flag allows users to customize the diamond command by providing a string of preferred diamond option. For example, if the user would like to change the identity threshold to 95 % for alignments and add the flag '--fast', the user could input the following when running sieve: 
 --user_diamond_options '-f 100 --unal 0 --id 95 -e 1e-6 --fast'. 
 
 ``--diamond_min_align_reads`` (default: 0)
